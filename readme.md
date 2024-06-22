@@ -15,4 +15,9 @@
 * 代碼:https://github.com/GuanCheng0430/wp/blob/master/layout.html
 
 ------------------
+
+# 作業6 chat gpt
+## CSS :
+* 程式碼https://github.com/GuanCheng0430/wp/blob/master/%E4%BD%9C%E6%A5%AD6.html
+* 網頁:https://guancheng0430.github.io/wp/%E4%BD%9C%E6%A5%AD6.html
   
