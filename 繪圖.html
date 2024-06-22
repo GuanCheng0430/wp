@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>香菇比基尼貓娘圖案</title>
+<title>Among Us 繪圖</title>
 <style>
   body {
     display: flex;
@@ -11,121 +11,55 @@
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
+    background-color: #000;
   }
   canvas {
-    border: 1px solid #333;
+    border: 1px solid #fff;
   }
 </style>
 </head>
 <body>
-  <canvas id="mushroomBikiniCatgirlCanvas" width="400" height="400"></canvas>
+  <canvas id="amongUsCanvas" width="400" height="400"></canvas>
 
   <script>
     // 獲取 Canvas 元素和繪圖上下文
-    var canvas = document.getElementById('mushroomBikiniCatgirlCanvas');
+    var canvas = document.getElementById('amongUsCanvas');
     var ctx = canvas.getContext('2d');
 
-    // 設置貓娘圖案的基本顏色
-    var catgirlColors = {
-      body: '#ffb6c1', // 粉紅色
-      ears: '#ffb6c1', // 粉紅色
-      eyes: '#fff',    // 白色
-      pupils: '#000',  // 黑色
-      mouth: '#000'    // 黑色
-    };
+    // 設置顏色
+    var bodyColor = '#ffcc5c'; // 黃色
+    var visorColor = '#000'; // 黑色
+    var backpackColor = '#7f8c8d'; // 灰色
 
-    // 設置香菇的顏色和形狀
-    var mushroomColor = '#8b4513'; // 棕色
-    var mushroomShape = [
-      { x: 190, y: 200, radius: 20 },
-      { x: 220, y: 210, radius: 25 },
-      { x: 180, y: 220, radius: 22 },
-      { x: 210, y: 235, radius: 18 },
-      { x: 240, y: 225, radius: 21 },
-      { x: 200, y: 250, radius: 23 }
-    ];
+    // 繪製 Among Us 角色
+    drawAmongUs();
 
-    // 繪製香菇比基尼貓娘圖案
-    drawMushroomBikiniCatgirl();
-
-    function drawMushroomBikiniCatgirl() {
-      // 繪製貓娘的頭部和耳朵
-      drawHead();
-      drawEars();
-
-      // 繪製貓娘的眼睛和嘴巴
-      drawEyes();
-      drawMouth();
-
-      // 繪製香菇圖案在比基尼上衣上
-      drawMushrooms();
-    }
-
-    // 繪製貓娘的頭部
-    function drawHead() {
-      ctx.fillStyle = catgirlColors.body;
+    function drawAmongUs() {
+      // 繪製身體
+      ctx.fillStyle = bodyColor;
       ctx.beginPath();
-      ctx.arc(200, 100, 80, 0, Math.PI * 2); // 圓弧
+      ctx.arc(200, 200, 100, 0, Math.PI * 2); // 身體
       ctx.fill();
-      ctx.stroke();
-    }
 
-    // 繪製貓娘的耳朵
-    function drawEars() {
-      ctx.fillStyle = catgirlColors.ears;
+      // 繪製眼睛
+      ctx.fillStyle = visorColor;
       ctx.beginPath();
-      ctx.moveTo(150, 70); // 移動到起始點
-      ctx.lineTo(180, 20); // 畫線到第一點
-      ctx.lineTo(220, 20); // 畫線到第二點
-      ctx.lineTo(250, 70); // 畫線到第三點
-      ctx.fill();
-      ctx.stroke();
-    }
-
-    // 繪製貓娘的眼睛
-    function drawEyes() {
-      ctx.fillStyle = catgirlColors.eyes;
-      ctx.beginPath();
-      ctx.arc(180, 100, 15, 0, Math.PI * 2); // 左眼
-      ctx.fill();
-      ctx.stroke();
-      ctx.beginPath();
-      ctx.arc(220, 100, 15, 0, Math.PI * 2); // 右眼
-      ctx.fill();
-      ctx.stroke();
-
-      // 繪製眼珠
-      ctx.fillStyle = catgirlColors.pupils;
-      ctx.beginPath();
-      ctx.arc(190, 100, 5, 0, Math.PI * 2); // 左眼珠
+      ctx.arc(170, 180, 15, 0, Math.PI * 2); // 左眼
       ctx.fill();
       ctx.beginPath();
-      ctx.arc(210, 100, 5, 0, Math.PI * 2); // 右眼珠
+      ctx.arc(230, 180, 15, 0, Math.PI * 2); // 右眼
       ctx.fill();
-    }
 
-    // 繪製貓娘的嘴巴
-    function drawMouth() {
-      ctx.strokeStyle = catgirlColors.mouth;
+      // 繪製背包
+      ctx.fillStyle = backpackColor;
       ctx.beginPath();
-      ctx.moveTo(180, 130); // 移動到起始點
-      ctx.quadraticCurveTo(200, 150, 220, 130); // 二次貝塞爾曲線
-      ctx.stroke();
-    }
-
-    // 繪製香菇圖案
-    function drawMushrooms() {
-      ctx.fillStyle = mushroomColor;
-      for (var i = 0; i < mushroomShape.length; i++) {
-        var mushroom = mushroomShape[i];
-        ctx.beginPath();
-        ctx.arc(mushroom.x, mushroom.y, mushroom.radius, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.stroke();
-      }
+      ctx.moveTo(200, 300); // 背包上方
+      ctx.lineTo(250, 350); // 背包右下角
+      ctx.lineTo(200, 380); // 背包下方
+      ctx.lineTo(150, 350); // 背包左下角
+      ctx.closePath();
+      ctx.fill();
     }
   </script>
 </body>
 </html>
-
