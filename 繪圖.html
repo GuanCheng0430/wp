@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>比基尼貓娘圖案</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+  canvas {
+    border: 1px solid #333;
+  }
+</style>
+</head>
+<body>
+  <canvas id="bikiniCatgirlCanvas" width="400" height="400"></canvas>
+
+  <script>
+    // 獲取 Canvas 元素和繪圖上下文
+    var canvas = document.getElementById('bikiniCatgirlCanvas');
+    var ctx = canvas.getContext('2d');
+
+    // 繪製比基尼貓娘圖案
+    drawBikiniCatgirl();
+
+    function drawBikiniCatgirl() {
+      // 設置顏色
+      ctx.fillStyle = '#ffb6c1'; // 粉紅色
+      ctx.strokeStyle = '#000'; // 黑色
+
+      // 繪製頭部
+      ctx.beginPath();
+      ctx.arc(200, 100, 80, 0, Math.PI * 2); // 圓弧
+      ctx.fill();
+      ctx.stroke();
+
+      // 繪製耳朵
+      ctx.beginPath();
+      ctx.moveTo(150, 70); // 移動到起始點
+      ctx.lineTo(180, 20); // 畫線到第一點
+      ctx.lineTo(220, 20); // 畫線到第二點
+      ctx.lineTo(250, 70); // 畫線到第三點
+      ctx.fill();
+      ctx.stroke();
+
+      // 繪製眼睛
+      ctx.fillStyle = '#fff'; // 白色
+      ctx.beginPath();
+      ctx.arc(180, 100, 15, 0, Math.PI * 2); // 左眼
+      ctx.fill();
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.arc(220, 100, 15, 0, Math.PI * 2); // 右眼
+      ctx.fill();
+      ctx.stroke();
+
+      // 繪製眼珠
+      ctx.fillStyle = '#000'; // 黑色
+      ctx.beginPath();
+      ctx.arc(190, 100, 5, 0, Math.PI * 2); // 左眼珠
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(210, 100, 5, 0, Math.PI * 2); // 右眼珠
+      ctx.fill();
+
+      // 繪製嘴巴
+      ctx.beginPath();
+      ctx.moveTo(180, 130); // 移動到起始點
+      ctx.quadraticCurveTo(200, 150, 220, 130); // 二次貝塞爾曲線
+      ctx.stroke();
+
+      // 繪製身體
+      ctx.fillStyle = '#ffb6c1'; // 粉紅色
+      ctx.strokeStyle = '#000'; // 黑色
+      ctx.beginPath();
+      ctx.moveTo(150, 180); // 移動到起始點
+      ctx.lineTo(250, 180); // 畫線到第一點
+      ctx.quadraticCurveTo(275, 230, 250, 280); // 二次貝塞爾曲線
+      ctx.lineTo(150, 280); // 畫線到第二點
+      ctx.quadraticCurveTo(125, 230, 150, 180); // 二次貝塞爾曲線
+      ctx.fill();
+      ctx.stroke();
+
+      // 繪製比基尼上衣
+      ctx.fillStyle = '#6495ed'; // 藍色
+      ctx.beginPath();
+      ctx.moveTo(150, 180); // 移動到起始點
+      ctx.lineTo(250, 180); // 畫線到第一點
+      ctx.quadraticCurveTo(230, 220, 200, 200); // 二次貝塞爾曲線
+      ctx.quadraticCurveTo(170, 220, 150, 180); // 二次貝塞爾曲線
+      ctx.fill();
+      ctx.stroke();
+
+      // 繪製比基尼下褲
+      ctx.fillStyle = '#6495ed'; // 藍色
+      ctx.beginPath();
+      ctx.moveTo(180, 280); // 移動到起始點
+      ctx.lineTo(220, 280); // 畫線到第一點
+      ctx.quadraticCurveTo(200, 300, 180, 280); // 二次貝塞爾曲線
+      ctx.fill();
+      ctx.stroke();
+    }
+  </script>
+</body>
+</html>
