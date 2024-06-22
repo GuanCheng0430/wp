@@ -10,5 +10,9 @@
 
 -------------------------------------------------------------------
 
-# 作業三🥇chatgpt
-* 網頁:
+# 作業八🥇W3school
+* 網頁:https://guancheng0430.github.io/wp/layout.html
+* 代碼:https://github.com/GuanCheng0430/wp/blob/master/layout.html
+
+------------------
+  
